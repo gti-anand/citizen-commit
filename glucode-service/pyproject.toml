@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "glucode-service"
+version = "1.0.0"
+description = "Glucose analysis microservice"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:tool.poetry.version"]
+version_variables = ["VERSION"]
+match_commit = "^(feat|fix|refactor|perf|docs)\\(glucode-service\\)"
+tag_format = "glucode-service/v{version}"
+changelog_file = "CHANGELOG.md"
+commit_parser = "conventional"
+
+[tool.semantic_release.changelog]
+changelog_sections = [
+    { type = "feat",     section = "Features"     },
+    { type = "fix",      section = "Bug Fixes"    },
+    { type = "perf",     section = "Performance"  },
+    { type = "refactor", section = "Refactoring"  },
+]
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
+
+[tool.semantic_release.branches.develop]
+match = "develop"
+prerelease = true
+prerelease_token = "dev"
