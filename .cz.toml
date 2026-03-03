@@ -1,0 +1,47 @@
+[tool.commitizen]
+name = "cz_customize"
+version_scheme = "semver"
+tag_format = "v$version"
+update_changelog_on_bump = true
+changelog_file = "CHANGELOG.md"
+bump_pattern = "^(feat|fix|refactor|perf)"
+bump_map = { "feat" = "MINOR", "fix" = "PATCH", "refactor" = "PATCH", "perf" = "PATCH" }
+changelog_incremental = true
+schema_pattern = "(feat|fix|docs|style|refactor|test|chore|perf|build|ci)(\\(isolated-service|glucode-service\\))(!)?:(\\s.*)"
+
+[tool.commitizen.customize]
+message_template = "{{change_type}}({{scope}}){% if breaking %}!{% endif %}: {{message}}"
+
+[[tool.commitizen.customize.questions]]
+type = "list"
+name = "change_type"
+message = "Select the type of change"
+choices = [
+  { value = "feat",     name = "feat:     A new feature"           },
+  { value = "fix",      name = "fix:      A bug fix"               },
+  { value = "docs",     name = "docs:     Documentation only"      },
+  { value = "refactor", name = "refactor: Code restructure"        },
+  { value = "perf",     name = "perf:     Performance improvement"  },
+  { value = "test",     name = "test:     Adding tests"            },
+  { value = "chore",    name = "chore:    Build/config changes"    },
+]
+
+[[tool.commitizen.customize.questions]]
+type = "list"
+name = "scope"
+message = "Select the scope (which service?)"
+choices = [
+  { value = "isolated-service", name = "isolated-service  → glucose data API"      },
+  { value = "glucode-service", name = "glucode-service  → analysis microservice" },
+]
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "message"
+message = "Short description:"
+
+[[tool.commitizen.customize.questions]]
+type = "confirm"
+name = "breaking"
+message = "Is this a BREAKING CHANGE?"
+default = false

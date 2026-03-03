@@ -1,0 +1,7 @@
+[tool.commitizen]
+name = "cz_customize"
+tag_format = "v$version"
+update_changelog_on_bump = true
+changelog_file = "CHANGELOG.md"
+version_scheme = "semver"
+schema_pattern = "(feat|fix|docs|style|refactor|test|chore|perf|build|ci)(\\(isolated-service|glucode-service\\))(!)?:(\\s.*)"

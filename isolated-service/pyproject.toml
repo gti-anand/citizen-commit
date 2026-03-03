@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "isolated-service"
+version = "1.0.0"
+description = "Glucose data API service"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:tool.poetry.version"]
+version_variables = ["VERSION"]
+match_commit = "^(feat|fix|refactor|perf|docs)\\(isolated-service\\)"
+tag_format = "isolated-service/v{version}"
+changelog_file = "CHANGELOG.md"
+commit_parser = "conventional"
+
+changelog_sections = [
+    { type = "feat",     section = "Features"     },
+    { type = "fix",      section = "Bug Fixes"    },
+    { type = "perf",     section = "Performance"  },
+    { type = "refactor", section = "Refactoring"  },
+]
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
+
+[tool.semantic_release.branches.develop]
+match = "develop"
+prerelease = true
+prerelease_token = "dev"
