@@ -5,7 +5,7 @@ description = "Glucose analysis microservice"
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variables = ["VERSION"]
+version_variables = ["VERSION:1.0.0"]
 match_commit = "^(feat|fix|refactor|perf|docs)\\(glucode-service\\)"
 tag_format = "glucode-service/v{version}"
 changelog_file = "CHANGELOG.md"
