@@ -5,7 +5,7 @@ description = "Glucose data API service"
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variables = ["VERSION"]
+version_variables = ["VERSION:1.0.0"]
 match_commit = "^(feat|fix|refactor|perf|docs)\\(isolated-service\\)"
 tag_format = "isolated-service/v{version}"
 changelog_file = "CHANGELOG.md"
