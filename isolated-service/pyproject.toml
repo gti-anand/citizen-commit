@@ -11,6 +11,7 @@ tag_format = "isolated-service/v{version}"
 changelog_file = "CHANGELOG.md"
 commit_parser = "conventional"
 
+[tool.semantic_release.changelog]
 changelog_sections = [
     { type = "feat",     section = "Features"     },
     { type = "fix",      section = "Bug Fixes"    },
