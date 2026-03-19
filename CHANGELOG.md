@@ -1,3 +1,8 @@
+## v0.1.2 (2026-03-19)
+
+
+- fix(glucode-service): log pattern added
+
 ## v0.1.1 (2026-03-19)
 
 
