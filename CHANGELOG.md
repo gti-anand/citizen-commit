@@ -1,3 +1,8 @@
+## v0.2.0 (2026-03-19)
+
+
+- feat(glucode-service): New Branch code push
+
 ## v0.1.3 (2026-03-19)
 
 
