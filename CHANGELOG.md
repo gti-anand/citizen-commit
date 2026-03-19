@@ -1,3 +1,8 @@
+## v0.1.3 (2026-03-19)
+
+
+- fix(glucode-service): New bug fix given
+
 ## v0.1.2 (2026-03-19)
 
 
