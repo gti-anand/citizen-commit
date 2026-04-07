@@ -1,3 +1,9 @@
+## v0.2.1 (2026-04-07)
+
+
+- chore: remove IDE files and update gitignore
+- fix(glucode-service): print statement removed
+
 ## v0.2.0 (2026-03-19)
 
 
